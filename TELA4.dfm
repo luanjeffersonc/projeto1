@@ -1,0 +1,159 @@
+object TelaCadastroCliente: TTelaCadastroCliente
+  Left = 0
+  Top = 0
+  Caption = 'Tela Cadastro Cliente'
+  ClientHeight = 404
+  ClientWidth = 336
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 21
+    Width = 37
+    Height = 13
+    Caption = 'C'#243'digo:'
+  end
+  object Label2: TLabel
+    Left = 24
+    Top = 67
+    Width = 31
+    Height = 13
+    Caption = 'Nome:'
+  end
+  object Label3: TLabel
+    Left = 24
+    Top = 215
+    Width = 49
+    Height = 13
+    Caption = 'Endere'#231'o:'
+  end
+  object Label4: TLabel
+    Left = 24
+    Top = 261
+    Width = 37
+    Height = 13
+    Caption = 'Cidade:'
+  end
+  object Label5: TLabel
+    Left = 24
+    Top = 113
+    Width = 21
+    Height = 13
+    Caption = 'Cpf:'
+  end
+  object Label6: TLabel
+    Left = 24
+    Top = 159
+    Width = 31
+    Height = 13
+    Caption = 'Limite:'
+  end
+  object Label7: TLabel
+    Left = 251
+    Top = 261
+    Width = 15
+    Height = 13
+    Caption = 'Uf:'
+  end
+  object Label8: TLabel
+    Left = 160
+    Top = 159
+    Width = 46
+    Height = 13
+    Caption = 'Telefone:'
+  end
+  object Label9: TLabel
+    Left = 200
+    Top = 113
+    Width = 100
+    Height = 13
+    Caption = 'Data de Nascimento:'
+  end
+  object Db_codigoCliente: TDBEdit
+    Left = 24
+    Top = 40
+    Width = 65
+    Height = 21
+    TabOrder = 0
+  end
+  object Db_NomeCliente: TDBEdit
+    Left = 24
+    Top = 86
+    Width = 297
+    Height = 21
+    TabOrder = 1
+  end
+  object Db_enderecoCliente: TDBEdit
+    Left = 24
+    Top = 234
+    Width = 297
+    Height = 21
+    TabOrder = 2
+  end
+  object Db_CidadeCliente: TDBEdit
+    Left = 24
+    Top = 280
+    Width = 211
+    Height = 21
+    TabOrder = 3
+  end
+  object Db_cpfCliente: TDBEdit
+    Left = 24
+    Top = 132
+    Width = 161
+    Height = 21
+    TabOrder = 4
+  end
+  object Bt_SalvarCliente: TBitBtn
+    Left = 80
+    Top = 336
+    Width = 75
+    Height = 25
+    Caption = 'Salvar'
+    TabOrder = 5
+  end
+  object Bt_SairCliente: TBitBtn
+    Left = 191
+    Top = 336
+    Width = 75
+    Height = 25
+    Caption = 'Sair'
+    TabOrder = 6
+  end
+  object Db_LimiteCliente: TDBEdit
+    Left = 24
+    Top = 178
+    Width = 105
+    Height = 21
+    TabOrder = 7
+  end
+  object Dbc_UF_CadastroCliente: TDBComboBox
+    Left = 251
+    Top = 280
+    Width = 70
+    Height = 21
+    TabOrder = 8
+  end
+  object DBDateEdit1: TDBDateEdit
+    Left = 200
+    Top = 132
+    Width = 121
+    Height = 21
+    NumGlyphs = 2
+    TabOrder = 9
+  end
+  object DBEdit1: TDBEdit
+    Left = 160
+    Top = 178
+    Width = 161
+    Height = 21
+    TabOrder = 10
+  end
+end

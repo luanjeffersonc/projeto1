@@ -1,0 +1,24 @@
+unit TELA1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,TELA2;
+
+type
+  TTela01 = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Tela01: TTela01;
+
+implementation
+
+{$R *.dfm}
+
+end.

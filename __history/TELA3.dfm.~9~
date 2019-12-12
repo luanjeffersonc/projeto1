@@ -1,0 +1,121 @@
+object TelaCadastroUF: TTelaCadastroUF
+  Left = 0
+  Top = 0
+  Caption = 'TelaCadastroUF'
+  ClientHeight = 420
+  ClientWidth = 580
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 22
+    Top = 61
+    Width = 15
+    Height = 13
+    Caption = 'Uf:'
+  end
+  object Label2: TLabel
+    Left = 202
+    Top = 61
+    Width = 50
+    Height = 13
+    Caption = 'Descri'#231#227'o:'
+  end
+  object BtSalvarUF: TBitBtn
+    Left = 22
+    Top = 22
+    Width = 75
+    Height = 25
+    Caption = 'Salvar'
+    TabOrder = 0
+  end
+  object DbDescricaoUf: TDBEdit
+    Left = 202
+    Top = 80
+    Width = 137
+    Height = 21
+    TabOrder = 1
+  end
+  object dbUF: TDBEdit
+    Left = 22
+    Top = 80
+    Width = 131
+    Height = 21
+    DataSource = DataSource1
+    TabOrder = 2
+  end
+  object BtEditarUF: TBitBtn
+    Left = 144
+    Top = 22
+    Width = 75
+    Height = 25
+    Caption = 'Editar'
+    TabOrder = 3
+  end
+  object BtApagarUF: TBitBtn
+    Left = 264
+    Top = 22
+    Width = 75
+    Height = 25
+    Caption = 'Apagar'
+    TabOrder = 4
+  end
+  object DBGrid1: TDBGrid
+    Left = 22
+    Top = 120
+    Width = 523
+    Height = 261
+    DataSource = DataSource1
+    TabOrder = 5
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        Visible = True
+      end
+      item
+        Expanded = False
+        Visible = True
+      end>
+  end
+  object BtSairCliente: TBitBtn
+    Left = 264
+    Top = 387
+    Width = 75
+    Height = 25
+    Caption = 'Sair'
+    TabOrder = 6
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=projeto1'
+      'User_Name=postgres'
+      'Password=admin'
+      'DriverID=PG')
+    Connected = True
+    Left = 496
+    Top = 40
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQueryUF
+    Left = 392
+    Top = 32
+  end
+  object FDQueryUF: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from estado')
+    Left = 440
+    Top = 32
+  end
+end

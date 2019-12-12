@@ -1,0 +1,16 @@
+program ProjetoNovo;
+
+uses
+  Vcl.Forms,
+  TELA1 in 'TELA1.pas' {Tela01},
+  TELA2 in 'TELA2.pas' {TelaPesquisaCliente};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TTela01, Tela01);
+  Application.CreateForm(TTelaPesquisaCliente, TelaPesquisaCliente);
+  Application.Run;
+end.

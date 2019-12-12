@@ -1,0 +1,43 @@
+unit TELA1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,TELA2,TELA3, Vcl.Menus,
+  FireDAC.Phys.PGDef, FireDAC.Stan.Intf, FireDAC.Phys, FireDAC.Phys.PG;
+
+type
+  TTela01 = class(TForm)
+    MainMenu1: TMainMenu;
+    Uf1: TMenuItem;
+    Cliente2: TMenuItem;
+    FDPhysPgDriverLink1: TFDPhysPgDriverLink;
+    procedure Cliente2Click(Sender: TObject);
+    procedure Uf1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Tela01: TTela01;
+
+implementation
+
+{$R *.dfm}
+
+procedure TTela01.Cliente2Click(Sender: TObject);
+begin
+TELA2.TelaPesquisaCliente.ShowModal;
+end;
+
+procedure TTela01.Uf1Click(Sender: TObject);
+begin
+TELA3.TelaCadastroUF.FDQueryUF.Close;
+TELA3.TelaCadastroUF.FDQueryUF.open;
+TELA3.TelaCadastroUF.ShowModal;
+end;
+
+end.

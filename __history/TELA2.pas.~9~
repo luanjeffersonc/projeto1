@@ -1,0 +1,35 @@
+unit TELA2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,TELA4, Vcl.StdCtrls, Vcl.Buttons,
+  FireDAC.Phys.PGDef, FireDAC.Stan.Intf, FireDAC.Phys, FireDAC.Phys.PG;
+
+type
+  TTelaPesquisaCliente = class(TForm)
+    btNovoCliente: TBitBtn;
+    btEditarCliente: TBitBtn;
+    BtApagarCliente: TBitBtn;
+    FDPhysPgDriverLink1: TFDPhysPgDriverLink;
+    procedure btNovoClienteClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  TelaPesquisaCliente: TTelaPesquisaCliente;
+
+implementation
+
+{$R *.dfm}
+
+procedure TTelaPesquisaCliente.btNovoClienteClick(Sender: TObject);
+begin
+TELA4.TelaCadastroCliente.ShowModal;
+end;
+
+end.

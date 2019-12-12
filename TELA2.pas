@@ -1,0 +1,45 @@
+unit TELA2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,TELA4, Vcl.StdCtrls, Vcl.Buttons,
+  FireDAC.Phys.PGDef, FireDAC.Stan.Intf, FireDAC.Phys, FireDAC.Phys.PG,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  FireDAC.UI.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.VCLUI.Wait,
+  Data.DB, Vcl.Grids, Vcl.DBGrids, FireDAC.Comp.Client, FireDAC.Comp.DataSet,TELA3;
+
+type
+  TTelaPesquisaCliente = class(TForm)
+    btNovoCliente: TBitBtn;
+    btEditarCliente: TBitBtn;
+    BtApagarCliente: TBitBtn;
+    FDQuery1: TFDQuery;
+    FDConnection1: TFDConnection;
+    DataSource1: TDataSource;
+    DBGrid1: TDBGrid;
+    BitBtn1: TBitBtn;
+    Bt_PesquisarCliente: TBitBtn;
+    Tedit_PesquisarCliente: TEdit;
+    procedure btNovoClienteClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  TelaPesquisaCliente: TTelaPesquisaCliente;
+
+implementation
+
+{$R *.dfm}
+
+procedure TTelaPesquisaCliente.btNovoClienteClick(Sender: TObject);
+begin
+TELA4.TelaCadastroCliente.ShowModal;
+end;
+
+end.

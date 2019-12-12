@@ -1,0 +1,14 @@
+program ProjetoNovo;
+
+uses
+  Vcl.Forms,
+  TELA1 in 'TELA1.pas' {Tela01};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TTela01, Tela01);
+  Application.Run;
+end.
