@@ -3,7 +3,7 @@ object TelaCadastroUF: TTelaCadastroUF
   Top = 0
   Caption = 'TelaCadastroUF'
   ClientHeight = 420
-  ClientWidth = 374
+  ClientWidth = 637
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -35,18 +35,22 @@ object TelaCadastroUF: TTelaCadastroUF
     Caption = 'Salvar'
     TabOrder = 0
   end
-  object DBEdit1: TDBEdit
+  object DbDescricaoUf: TDBEdit
     Left = 202
     Top = 80
-    Width = 121
+    Width = 137
     Height = 21
+    DataField = 'descricao'
+    DataSource = DataSource1
     TabOrder = 1
   end
   object dbUF: TDBEdit
     Left = 22
     Top = 80
-    Width = 121
+    Width = 131
     Height = 21
+    DataField = 'uf'
+    DataSource = DataSource1
     TabOrder = 2
   end
   object BtEditarUF: TBitBtn
@@ -69,12 +73,61 @@ object TelaCadastroUF: TTelaCadastroUF
     Left = 22
     Top = 120
     Width = 317
-    Height = 253
+    Height = 261
+    DataSource = DataSource1
     TabOrder = 5
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'codigoestado'
+        Width = 81
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'uf'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'descricao'
+        Width = 150
+        Visible = True
+      end>
+  end
+  object BtSairCliente: TBitBtn
+    Left = 264
+    Top = 387
+    Width = 75
+    Height = 25
+    Caption = 'Sair'
+    TabOrder = 6
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=projeto1'
+      'User_Name=postgres'
+      'Password=admin'
+      'DriverID=PG')
+    Connected = True
+    Left = 448
+    Top = 16
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQueryUF
+    Left = 368
+    Top = 16
+  end
+  object FDQueryUF: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from estado')
+    Left = 408
+    Top = 16
   end
 end

@@ -26,7 +26,6 @@ type
     FDConnection1: TFDConnection;
     DataSource1: TDataSource;
     FDQueryUF: TFDQuery;
-    procedure BtSalvarUFClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,10 +38,5 @@ var
 implementation
 
 {$R *.dfm}
-
-procedure TTelaCadastroUF.BtSalvarUFClick(Sender: TObject);
-begin
-//este botão salva cliente
-end;
 
 end.

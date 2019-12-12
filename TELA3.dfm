@@ -34,6 +34,7 @@ object TelaCadastroUF: TTelaCadastroUF
     Height = 25
     Caption = 'Salvar'
     TabOrder = 0
+    OnClick = BtSalvarUFClick
   end
   object DbDescricaoUf: TDBEdit
     Left = 202
